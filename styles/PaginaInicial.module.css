@@ -1,0 +1,136 @@
+.paginaInicial {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  position: relative;
+  margin: 0 10px;
+  width: 150px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.menuIcon {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  transition: transform 0.6s ease;
+}
+
+.sidebarHeader {
+  padding: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+}
+
+.userImage {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.menuOptions {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuOptions li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menuOptions li:hover {
+  background-color: #da0404;
+  color: white;
+}
+
+.menuOptions .active .storeOptions,
+.menuOptions .active .taskOptions {
+  display: block;
+  transition: display 0.3s ease; /* Adicionando transição */
+}
+
+.storeOptions,
+.taskOptions {
+  display: none;
+  padding-left: 20px;
+  transition: display 0.3s ease; /* Adicionando transição */
+}
+
+.storeOptions button,
+.taskOptions button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 5px 0;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  background-color: #fff0f0;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.storeOptions button:hover,
+.taskOptions button:hover {
+  background-color: #da0404;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.configOption,
+.logoutOption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhar os itens à esquerda */
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.configOption:hover,
+.logoutOption:hover {
+  background-color: #f4f4f4;
+}
+
+.configOption svg,
+.logoutOption svg {
+  margin-right: 5px; /* Ajuste fino da distância entre o ícone e o texto */
+}
+
+.configOption,
+.logoutOption {
+  gap: 10px; /* Ajusta a distância entre o ícone e o texto */
+}
+

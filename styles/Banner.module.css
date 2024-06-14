@@ -1,0 +1,78 @@
+/* components/Banner.module.css */
+.banner {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5); 
+  
+}
+.feriadoTitle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(247, 5, 5, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.imageContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.image {
+  width: 100dvw;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #da0404;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #930303;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

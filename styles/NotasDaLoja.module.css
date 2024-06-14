@@ -1,0 +1,57 @@
+.notasDaLoja {
+  padding: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.notaContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.notaTexto {
+  word-wrap: break-word;
+  margin-bottom: 5px;
+}
+
+.notaData {
+  font-size: 12px;
+  color: rgb(72, 72, 72);
+  align-self: flex-end;
+}
+
+.button {
+  background-color: #da0404;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #930303;
+  transform: translateY(-2px);
+}

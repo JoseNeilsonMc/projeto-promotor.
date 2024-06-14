@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+}
+
+.Container::before {
+  content: "";
+  position:absolute;
+  top: 10px;
+  width: 15rem;
+  height: 5rem;
+  background-image: url('../public/Logo_da_Lacticínios_Tirol.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1; 
+  filter: invert(100%) brightness(500%); 
+}
