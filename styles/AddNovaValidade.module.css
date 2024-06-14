@@ -21,13 +21,16 @@
   margin-top: 20px;
 }
 
-.backButton, .button {
+.backButton,
+.button {
   cursor: pointer;
   padding: 12px 24px;
   color: white;
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
   font-size: 16px;
 }
 
@@ -46,7 +49,7 @@
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
 }
 
 .button:hover {
@@ -80,7 +83,7 @@
 }
 
 .message {
-  color: #4CAF50;
+  color: #4caf50;
   font-size: 16px;
   margin-top: 20px;
 }

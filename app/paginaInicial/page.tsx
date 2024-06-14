@@ -1,7 +1,13 @@
-"use client";
+'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { FaBars, FaTimes, FaCog, FaSignOutAlt, FaUserCircle } from 'react-icons/fa';
+import {
+  FaBars,
+  FaTimes,
+  FaCog,
+  FaSignOutAlt,
+  FaUserCircle,
+} from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import logoImage from '../../public/Logo_da_Lacticínios_Tirol.png';
@@ -24,8 +30,8 @@ const PaginaInicial = () => {
 
   useEffect(() => {
     const savedNotas = Object.keys(localStorage)
-      .filter(key => key.startsWith('nota-'))
-      .map(key => {
+      .filter((key) => key.startsWith('nota-'))
+      .map((key) => {
         try {
           return JSON.parse(localStorage.getItem(key));
         } catch (e) {
@@ -33,7 +39,7 @@ const PaginaInicial = () => {
           return null;
         }
       })
-      .filter(note => note !== null);
+      .filter((note) => note !== null);
     setNotas(savedNotas);
   }, []);
 
@@ -100,7 +106,7 @@ const PaginaInicial = () => {
 
   const handleDeleteNota = (id) => {
     localStorage.removeItem(id);
-    setNotas(notas.filter(nota => nota.id !== id));
+    setNotas(notas.filter((nota) => nota.id !== id));
   };
 
   const handleLogout = () => {
@@ -115,9 +121,7 @@ const PaginaInicial = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </header>
-      <main className={styles.main}>
-        {showBanner && <Banner />}
-      </main>
+      <main className={styles.main}>{showBanner && <Banner />}</main>
       {menuOpen && (
         <aside className={styles.sidebar} ref={sidebarRef}>
           <div className={styles.sidebarHeader}>
@@ -127,7 +131,10 @@ const PaginaInicial = () => {
           <ul className={styles.menuOptions}>
             <li>Selecionar Roteiro (Para o Líder)</li>
             <li>Adicionar Fotos ao Banner (Para o Líder)</li>
-            <li className={activeOption === 'lojas' ? styles.active : ''} onClick={() => handleOptionClick('lojas')}>
+            <li
+              className={activeOption === 'lojas' ? styles.active : ''}
+              onClick={() => handleOptionClick('lojas')}
+            >
               Selecionar Lojas
               {activeOption === 'lojas' && (
                 <div className={styles.storeOptions}>
@@ -141,7 +148,10 @@ const PaginaInicial = () => {
                 </div>
               )}
             </li>
-            <li className={activeOption === 'tarefas' ? styles.active : ''} onClick={() => handleOptionClick('tarefas')}>
+            <li
+              className={activeOption === 'tarefas' ? styles.active : ''}
+              onClick={() => handleOptionClick('tarefas')}
+            >
               Tarefas da Loja (Para o Líder)
               {activeOption === 'tarefas' && (
                 <div className={styles.taskOptions}>
@@ -155,10 +165,15 @@ const PaginaInicial = () => {
             <li onClick={handleNotasClick}>Notas</li>
             <li onClick={handleNotasDaLojaClick}>Notas da Loja</li>
             <li>Datas de Validade</li>
-            <li onClick={handleAddNovaValidadeClick}>Adicionar Nova Validade</li>
+            <li onClick={handleAddNovaValidadeClick}>
+              Adicionar Nova Validade
+            </li>
           </ul>
           <div className={styles.footer}>
-            <div className={styles.configOption} onClick={() => alert('Configurações')}>
+            <div
+              className={styles.configOption}
+              onClick={() => alert('Configurações')}
+            >
               <FaCog /> Config
             </div>
             <div className={styles.logoutOption} onClick={handleLogout}>
@@ -171,13 +186,14 @@ const PaginaInicial = () => {
         <BlocoDeNotas onBack={handleBackToMenu} onSave={handleSaveNote} />
       )}
       {showNotasDaLoja && (
-        <NotasDaLoja onBack={handleBackToMenu} notas={notas} onDelete={handleDeleteNota} />
+        <NotasDaLoja
+          onBack={handleBackToMenu}
+          notas={notas}
+          onDelete={handleDeleteNota}
+        />
       )}
-      {showAddNovaValidade && (
-        <AddNovaValidade onBack={handleBackToMenu} />
-      )}
+      {showAddNovaValidade && <AddNovaValidade onBack={handleBackToMenu} />}
     </div>
-
   );
 };
 

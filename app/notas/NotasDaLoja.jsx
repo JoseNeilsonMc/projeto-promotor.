@@ -6,7 +6,7 @@ const NotasDaLoja = ({ onBack, notas, onDelete }) => {
     <div className={styles.notasDaLoja}>
       <h2 className={styles.heading}>Notas da Loja</h2>
       <ul className={styles.ul}>
-        {notas.map(nota => (
+        {notas.map((nota) => (
           <li key={nota.id} className={styles.li}>
             <div className={styles.notaContent}>
               <p className={styles.notaTexto}>{nota.texto}</p>
@@ -17,9 +17,9 @@ const NotasDaLoja = ({ onBack, notas, onDelete }) => {
             </button>
           </li>
         ))}
-      <button className={styles.button} onClick={onBack}>
-        Voltar
-      </button>
+        <button className={styles.button} onClick={onBack}>
+          Voltar
+        </button>
       </ul>
     </div>
   );

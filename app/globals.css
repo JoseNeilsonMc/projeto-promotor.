@@ -14,8 +14,8 @@ body {
 }
 
 .Container::before {
-  content: "";
-  position:absolute;
+  content: '';
+  position: absolute;
   top: 10px;
   width: 15rem;
   height: 5rem;
@@ -23,6 +23,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1; 
-  filter: invert(100%) brightness(500%); 
+  z-index: 1;
+  filter: invert(100%) brightness(500%);
 }

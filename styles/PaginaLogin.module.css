@@ -1,84 +1,82 @@
-
 .formContainer {
-    z-index: 1;
-    backdrop-filter: blur(4px);
-    color: rgb(253, 251, 251);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px 2px black;
-    padding: 1.5rem;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.5); 
-  }
-  
-  .heading {
-    margin-top: 0;
-    text-align: center;
-  }
-  
-  .label {
-    display: block;
-    font-size: 25px;
-    margin: 15px 0;
-  }
-  
-  .input {
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
-    padding: 10px;
-    font: 1rem sans-serif;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
-  
-  /* Section: Buttons */
-  .btn {
-    background-color: #4285F4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .btn:hover {
-    transform: scale(1.1);
-    box-shadow: 2px 2px 5px;
-    color: black;
-  }
-  
-  .btn:active {
-    transform: scale(0.9);
-  }
-  
-  .showPasswordBtn {
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .googleLogin {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .googleLogo {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    box-shadow: 0 0 10px rgba(4, 4, 4, 0.9);
-    border-radius: 50%;
-  }
-  
-  .msg {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 15px;
-  }
-  
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  color: rgb(253, 251, 251);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 2px black;
+  padding: 1.5rem;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  margin-top: 0;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+.input {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  font: 1rem sans-serif;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Section: Buttons */
+.btn {
+  background-color: #4285f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 5px;
+  color: black;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.showPasswordBtn {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.googleLogin {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.googleLogo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(4, 4, 4, 0.9);
+  border-radius: 50%;
+}
+
+.msg {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}

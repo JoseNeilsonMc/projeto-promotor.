@@ -15,7 +15,7 @@ const BlocoDeNotas = ({ onBack, onSave }) => {
       <textarea
         className={styles.textarea}
         value={texto}
-        onChange={e => setTexto(e.target.value)}
+        onChange={(e) => setTexto(e.target.value)}
         placeholder="Escreva sua nota aqui..."
       />
       <button className={styles.button} onClick={handleSave}>

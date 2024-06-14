@@ -24,7 +24,7 @@
 }
 
 .textarea:focus {
-  border-color: #007BFF;
+  border-color: #007bff;
   outline: none;
 }
 
@@ -38,7 +38,9 @@
   background-color: #da0404;
   color: #fff;
   font-size: 1rem;
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
 .button:hover {

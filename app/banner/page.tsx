@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '..//../styles/Banner.module.css';
 
@@ -9,13 +9,13 @@ const feriados = {
     'https://via.placeholder.com/800x600/0000FF/000000?text=Feliz+Ano+Novo+3',
     'https://via.placeholder.com/800x600/FFFF00/000000?text=Feliz+Ano+Novo+4',
   ],
-  'Natal': [
+  Natal: [
     'https://via.placeholder.com/800x600/00FFFF/000000?text=Feliz+Natal',
     'https://via.placeholder.com/800x600/FF00FF/000000?text=Feliz+Natal+2',
     'https://via.placeholder.com/800x600/800080/000000?text=Feliz+Natal+3',
     'https://via.placeholder.com/800x600/FFA500/000000?text=Feliz+Natal+4',
   ],
-  'Páscoa': [
+  Páscoa: [
     'https://via.placeholder.com/800x600/008000/000000?text=Feliz+Páscoa',
     'https://via.placeholder.com/800x600/000080/000000?text=Feliz+Páscoa+2',
     'https://via.placeholder.com/800x600/FFC0CB/000000?text=Feliz+Páscoa+3',
@@ -39,7 +39,9 @@ const Banner = () => {
         setCurrentIndex(currentIndex + 1);
       } else {
         setCurrentIndex(0);
-        setCurrentFeriadoIndex((prevIndex) => (prevIndex + 1) % feriadoNames.length);
+        setCurrentFeriadoIndex(
+          (prevIndex) => (prevIndex + 1) % feriadoNames.length
+        );
       }
     }
   };
@@ -49,7 +51,10 @@ const Banner = () => {
       setCurrentIndex(currentIndex - 1);
     } else {
       setCurrentIndex(images.length - 1);
-      setCurrentFeriadoIndex((prevIndex) => (prevIndex - 1 + feriadoNames.length) % feriadoNames.length);
+      setCurrentFeriadoIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + feriadoNames.length) % feriadoNames.length
+      );
     }
   };
 
@@ -79,15 +84,19 @@ const Banner = () => {
   return (
     <div className={styles.banner}>
       <h1 className={styles.title}>Aproveite nossas ideias</h1>
-      <div 
-        className={styles.imageContainer} 
-        ref={imageContainerRef} 
-        onMouseEnter={() => setPaused(true)} 
+      <div
+        className={styles.imageContainer}
+        ref={imageContainerRef}
+        onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         {images.map((src, index) => (
           <div key={index} className={styles.imageWrapper}>
-            <img src={src} alt={`${currentFeriado} ${index + 1}`} className={styles.image} />
+            <img
+              src={src}
+              alt={`${currentFeriado} ${index + 1}`}
+              className={styles.image}
+            />
             <div className={styles.feriadoTitle}>{currentFeriado}</div>
           </div>
         ))}
